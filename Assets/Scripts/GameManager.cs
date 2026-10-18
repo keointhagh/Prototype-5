@@ -20,7 +20,13 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        restartButton.onClick.AddListener(RestartGame);
+        isGameActive = false;
+    }
+
+    public void StartGame(float difficulty)
+    {
+        //restartButton.onClick.AddListener(RestartGame); //Add in Inspector instead as well
+        spawnRate /= difficulty;
         gameOverText.gameObject.SetActive(false);
         restartButton.gameObject.SetActive(false);
         isGameActive = true;
@@ -56,7 +62,7 @@ public class GameManager : MonoBehaviour
         restartButton.gameObject.SetActive(true);
         isGameActive = false;
     }
-    void RestartGame()
+    public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

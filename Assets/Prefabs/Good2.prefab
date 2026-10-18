@@ -155,3 +155,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Target
   pointValue: 5
   explosionParticle: {fileID: 7303472089845130122, guid: 6cbc21f5e9162483993a2b84b14d5ac8, type: 3}
+  hitSoundClip: {fileID: 8300000, guid: e9bb97b9da61d4845a4b7283438d8020, type: 3}
